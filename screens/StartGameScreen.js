@@ -1,8 +1,32 @@
-import { StyleSheet, TextInput, View } from "react-native";
+import { StyleSheet, TextInput, View, Alert } from "react-native";
+import { useState } from "react";
 
 import PrimaryButton from "../components/PrimaryButton";
 
-function StartGameScreen() {
+function StartGameScreen({onPickNumber}) {
+  const [enteredNumber, setEnteredNumber] = useState("");
+
+  function numberInputHandler(input) {
+    setEnteredNumber(input);
+  }
+  function resetInputHandler() {
+    setEnteredNumber("");
+  }
+
+  function confirmInputHandler() {
+    const chosenNumber = parseInt(enteredNumber);
+    if (isNaN(chosenNumber) || chosenNumber <= 0 || chosenNumber > 99) {
+      //show alert
+      Alert.alert(
+        "Invalid number!",
+        "Number has to be a number between 1 and 99",
+        [{ text: "Okay", style: "default", onPress:  resetInputHandler}]
+      );
+      return;
+    }
+    onPickNumber(chosenNumber)
+  }
+
   return (
     <View style={styles.inputContainer}>
       <TextInput
@@ -10,9 +34,17 @@ function StartGameScreen() {
         maxLength={2}
         keyboardType="number-pad"
         autoCorrect={false}
+        onChangeText={numberInputHandler}
+        value={enteredNumber}
       />
-      <PrimaryButton>Reset</PrimaryButton>
-      <PrimaryButton>Confirm</PrimaryButton>
+      <View style={styles.buttonsContainer}>
+        <View style={styles.buttonContainer}>
+          <PrimaryButton onPress={resetInputHandler}>Reset</PrimaryButton>
+        </View>
+        <View style={styles.buttonContainer}>
+          <PrimaryButton onPress={confirmInputHandler}>Confirm</PrimaryButton>
+        </View>
+      </View>
     </View>
   );
 }
@@ -21,14 +53,14 @@ export default StartGameScreen;
 
 const styles = StyleSheet.create({
   inputContainer: {
-    //flex: 1,
+    justifyContent: "",
+    alignItems: "center",
     padding: 16,
     marginTop: 100,
     marginHorizontal: 24,
-    backgroundColor: "#4e0329",
+    backgroundColor: "#3b021f",
     borderRadius: 8,
     elevation: 4,
-    
 
     //IOS shadows
     shadowColor: "black",
@@ -37,7 +69,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.25,
   },
   input: {
-    height: 50,
+    height: 60,
     width: 50,
     fontSize: 32,
     borderBottomColor: "#ddb52f",
@@ -47,5 +79,10 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     textAlign: "center",
   },
-  buttonContainer: {},
+  buttonsContainer: {
+    flexDirection: "row",
+  },
+  buttonContainer: {
+    flex: 1,
+  },
 });
