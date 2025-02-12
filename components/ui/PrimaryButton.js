@@ -30,7 +30,8 @@ const styles = StyleSheet.create({
   },
   buttonInnerContainer: {
     backgroundColor: Colors.primary500,
-    paddingVertical: 8,
+    paddingVertical: 12, // Espaço vertical
+    paddingHorizontal: 24, // Espaço horizontal
     elevation: 2,
   },
   buttonText: {
