@@ -38,7 +38,7 @@ Game/
 1. Clone este repositório:
 
 ```bash
-git clone https://github.com/pedester321/Game.git
+git clone https://github.com/pedester321/GuessMyNumberGame.git
 cd Game
 ```
 
