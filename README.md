@@ -1,6 +1,6 @@
 # 🎮 Guess My Number - React Native
 
-Um jogo interativo onde o celular tenta adivinhar o número escolhido pelo usuário. Desenvolvido em React Native como parte de um curso da Udemy.
+Um jogo interativo onde o celular tenta adivinhar o número escolhido pelo usuário. Desenvolvido em React Native como parte do um curso React Native - The Practical Guide na Udemy.
 
 ## 📌 Sobre o Jogo
 
@@ -11,20 +11,10 @@ O jogo funciona da seguinte forma:
 3. O jogo continua até que o celular acerte o número.
 4. A quantidade de tentativas é exibida no final da partida.
 
-## 📂 Estrutura do Projeto
-
-```
-Game/
-│-- assets/          # Recursos visuais
-│-- components/      # Componentes reutilizáveis da UI
-│-- constants/       # Configurações e valores fixos
-│-- screens/         # Telas do jogo
-│-- App.js           # Arquivo principal da aplicação
-│-- app.json         # Configuração do aplicativo
-│-- babel.config.js  # Configuração do Babel
-│-- package.json     # Dependências do projeto
-│-- package-lock.json # Lockfile para controle de dependências
-```
+## 📸 Screenshots
+<img src="screenshots/tela1.png" width="33%" />
+<img src="screenshots/tela2.png" width="33%" />
+<img src="screenshots/tela3.png" width="33%" />
 
 ## 🚀 Como Executar
 
@@ -70,8 +60,8 @@ expo start
 
 ## 📝 Licença
 
-Este projeto está licenciado sob a licença MIT. Consulte o arquivo LICENSE para mais detalhes.
+Este projeto está licenciado sob a licença MIT.
 
 ---
 
-Desenvolvido com ❤️ por Pedro Castro como parte de um curso da Udemy.
+Desenvolvido por Pedro Castro como parte do curso React Native - The Practical Guide na Udemy.
