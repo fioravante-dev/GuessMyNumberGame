@@ -12,9 +12,11 @@ O jogo funciona da seguinte forma:
 4. A quantidade de tentativas é exibida no final da partida.
 
 ## 📸 Screenshots
-<img src="screenshots/tela1.png" width="33%" />
-<img src="screenshots/tela2.png" width="33%" />
-<img src="screenshots/tela3.png" width="33%" />
+<p align="center">
+  <img src="screenshots/tela1.png" width="200" />
+  <img src="screenshots/tela2.png" width="200" />
+  <img src="screenshots/tela3.png" width="200" />
+</p>
 
 ## 🚀 Como Executar
 
