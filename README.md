@@ -30,7 +30,7 @@ O jogo funciona da seguinte forma:
 1. Clone este repositório:
 
 ```bash
-git clone https://github.com/pedester321/GuessMyNumberGame.git
+git clone https://github.com/fioravante-dev/GuessMyNumberGame.git
 cd Game
 ```
 
